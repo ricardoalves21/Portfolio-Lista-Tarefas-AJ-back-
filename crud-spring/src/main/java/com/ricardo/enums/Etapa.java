@@ -1,13 +1,14 @@
 package com.ricardo.enums;
 
-public enum Category {
+public enum Etapa {
 
-    BACKEND("back-end"),
-    FRONTEND("front-end");
+    AFAZER("a fazer"),
+    FAZENDO("fazendo"),
+    FEITO("feito");
 
-    private String value;
+    private final String value;
 
-    private Category(String value) {
+    private Etapa(String value) {
         this.value = value;
     }
 
@@ -17,7 +18,7 @@ public enum Category {
 
     @Override
     public String toString() {
-        return "Category{" +
+        return "Etapa{" +
                 "value='" + value + '\'' +
                 '}';
     }

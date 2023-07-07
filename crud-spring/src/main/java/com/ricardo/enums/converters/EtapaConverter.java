@@ -1,32 +1,32 @@
 package com.ricardo.enums.converters;
 
-import com.ricardo.enums.Category;
+import com.ricardo.enums.Etapa;
 import jakarta.persistence.AttributeConverter;
 import jakarta.persistence.Converter;
 
 import java.util.stream.Stream;
 
 @Converter(autoApply = true)
-public class CategoryConverter implements AttributeConverter<Category, String> {
+public class EtapaConverter implements AttributeConverter<Etapa, String> {
 
 
     @Override
-    public String convertToDatabaseColumn(Category category) {
+    public String convertToDatabaseColumn(Etapa etapa) {
 
-        if(category == null) {
+        if(etapa == null) {
             return null;
         }
-        return category.getValue();
+        return etapa.getValue();
     }
 
     @Override
-    public Category convertToEntityAttribute(String value) {
+    public Etapa convertToEntityAttribute(String value) {
 
         if(value == null) {
             return null;
         }
-        return Stream.of(Category.values())
-                .filter(c -> c.getValue().equals(value))
+        return Stream.of(Etapa.values())
+                .filter(e -> e.getValue().equals(value))
                 .findFirst()
                 .orElseThrow(IllegalArgumentException::new);
     }
