@@ -1,6 +1,6 @@
 package com.ricardo.repository;
 
-import com.ricardo.model.Course;
+import com.ricardo.model.Tarefa;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
@@ -8,6 +8,6 @@ import org.springframework.stereotype.Repository;
 //Este repositório usará todas as interfaces disponíveis no 'spring data jpa' para acesso ao DB.
 //Com isso temos acessos a métodos como 'findById', 'findByName', 'findAll', etc.
 @Repository
-public interface CourseRepository extends JpaRepository<Course, Long> {
+public interface TarefaRepository extends JpaRepository<Tarefa, Long> {
 
 }
