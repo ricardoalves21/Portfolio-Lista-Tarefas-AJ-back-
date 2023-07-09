@@ -1,7 +1,6 @@
 package com.ricardo.dto;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.ricardo.enums.Etapa;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Pattern;
@@ -27,6 +26,6 @@ public record TarefaDTO(
 
         @NotNull
         @Length(max = 10)
-        @Pattern(regexp = "a fazer|fazendo|feito")
+        @Pattern(regexp = "etapa1|etapa2|etapa3")
         String etapa
 ){}
