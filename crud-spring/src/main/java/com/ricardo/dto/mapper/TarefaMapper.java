@@ -36,9 +36,9 @@ public class TarefaMapper {
             return null;
         }
         return switch (value) {
-            case "a fazer" -> Etapa.AFAZER;
-            case "fazendo" -> Etapa.FAZENDO;
-            case "feito" -> Etapa.FEITO;
+            case "etapa1" -> Etapa.AFAZER;
+            case "etapa2" -> Etapa.FAZENDO;
+            case "etapa3" -> Etapa.FEITO;
             default -> throw new IllegalArgumentException("Etapa inválida: " + value);
         };
     }

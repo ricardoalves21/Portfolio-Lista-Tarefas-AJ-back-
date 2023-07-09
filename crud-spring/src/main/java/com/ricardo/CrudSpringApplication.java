@@ -17,20 +17,20 @@ public class CrudSpringApplication {
 
 	//A anotação 'Bean' diz pro spring gerenciar o ciclo de vida deste fluxo
 	//Este comando 'CommandLineRunner' coloca este comando pra ser executado assim que esta aplicação subir
-	@Bean
-	CommandLineRunner initDataBase(TarefaRepository tarefaRepository) {
-
-		return args -> {
-			tarefaRepository.deleteAll();
-
-			Tarefa t = new Tarefa();
-			t.setConteudo("Criar portfólio Java");
-			t.setResponsavel("Ricardo");
-			t.setEtapa(Etapa.AFAZER);
-
-			tarefaRepository.save(t);
-		};
-
-	}
+//	@Bean
+//	CommandLineRunner initDataBase(TarefaRepository tarefaRepository) {
+//
+//		return args -> {
+//			tarefaRepository.deleteAll();
+//
+//			Tarefa t = new Tarefa();
+//			t.setConteudo("Criar portfólio Java");
+//			t.setResponsavel("Ricardo Alves");
+//			t.setEtapa(Etapa.AFAZER);
+//
+//			tarefaRepository.save(t);
+//		};
+//
+//	}
 
 }

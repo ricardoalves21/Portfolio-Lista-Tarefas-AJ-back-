@@ -2,9 +2,9 @@ package com.ricardo.enums;
 
 public enum Etapa {
 
-    AFAZER("a fazer"),
-    FAZENDO("fazendo"),
-    FEITO("feito");
+    AFAZER("etapa1"),
+    FAZENDO("etapa2"),
+    FEITO("etapa3");
 
     private final String value;
 
