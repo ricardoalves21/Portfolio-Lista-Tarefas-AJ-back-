@@ -14,6 +14,7 @@ import java.util.List;
 
 @Validated
 @RestController //Esta anotação aviso ao spring que esta classe possui um endpoint (url que acessa uma API)
+@CrossOrigin(origins = "*", allowedHeaders = "*")
 @RequestMapping("/api/tarefas") //Este é o endpoint que estará exposto na API
 public class TarefaController {
 
