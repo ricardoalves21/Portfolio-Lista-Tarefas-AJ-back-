@@ -9,17 +9,14 @@ import jakarta.validation.constraints.Positive;
 import org.springframework.http.HttpStatus;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
-
 import java.util.List;
 
 @Validated
-@RestController //Esta anotação aviso ao spring que esta classe possui um endpoint (url que acessa uma API)
+@RestController
 @CrossOrigin(origins = "*", allowedHeaders = "*")
-@RequestMapping("/api/tarefas") //Este é o endpoint que estará exposto na API
+@RequestMapping("/api/tarefas")
 public class TarefaController {
 
-    //Estes atributos está possibilitando que o spring faça a injeção de dependências destas classes nesta Controller.
-    //O termo 'final' é para garantir que esta instância será utilizada sem nenhuma modificação de dados.
     private final TarefaService tarefaService;
 
     public TarefaController(TarefaService tarefaService) {

@@ -9,7 +9,6 @@ import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Positive;
 import org.springframework.stereotype.Service;
 import org.springframework.validation.annotation.Validated;
-
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -17,8 +16,6 @@ import java.util.stream.Collectors;
 @Service
 public class TarefaService {
 
-    //Este atributo está possibilitando que o spring faça a injeção de dependência deste repositório nesta Controller
-    //O termo 'final' é para garantir que esta instância será utilizada sem nenhuma modificação em seus dados
     private final TarefaRepository tarefaRepository;
     private final TarefaMapper tarefaMapper;
 
